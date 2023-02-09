@@ -1,0 +1,180 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: hsl(225, 100%, 94%);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+p {
+    font-weight: 500;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Desaturated Blue Text Accent */
+.light-accent-text {
+    color: hsl(224, 23%, 55%);
+}
+
+
+
+/* positions the order summary card in the center of the viewport. */
+.order-summary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 375px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px -5px, rgba(0, 0, 0, 0.2) 0px 10px 10px -5px;
+}
+
+/* Applies border-radius on hero image */
+.order-summary__image {
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+
+.order-summary__content {
+    text-align: center;
+    width: 84%;
+    margin: 0 auto;
+}
+
+
+.card-title {
+    color: hsl(223, 47%, 23%);
+}
+
+.card-description {
+    line-height: 1.6;
+}
+
+
+.annual-plan {
+    display: grid;
+    grid-template-areas:
+        'one two two three'
+        'one four four three'
+    ;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+
+.music-icon {
+    grid-area: one;
+}
+
+
+.annual-plan p:first-of-type {
+    text-align: start;
+    font-weight: 900;
+    grid-area: two;
+}
+
+.annual-plan p:last-of-type {
+    text-align: start;
+    grid-area: four;
+    color: hsl(224, 23%, 55%);
+}
+
+.change {
+    grid-area: three;
+    color: hsl(245, 75%, 52%);
+    padding: 10px 0;
+    
+}
+
+.button {
+    display: block;
+    text-decoration: none;
+}
+
+#proceed-to-payment-btn {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color:hsl(245, 75%, 52%);
+    border-radius: 10px;
+    border: none;
+    padding: 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px -5px, rgba(0, 0, 0, 0.2) 0px 10px 10px -5px;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+ #cancel-order-btn {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(224, 23%, 55%);
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem 0 2rem;
+    cursor: pointer;
+}
+
+
+.card-title,
+.card-description,
+.annual-plan,
+#proceed-to-payment-btn,
+#cancel-order-btn {
+    margin: 1rem 0;
+}
+
+/* Active States */
+
+#proceed-to-payment-btn:hover,
+#proceed-to-payment-btn:focus {
+    background-color:hsl(245, 100%, 65%);
+}
+
+#cancel-order-btn:hover,
+#cancel-order-btn:focus {
+    color: hsl(223, 47%, 23%);
+}
